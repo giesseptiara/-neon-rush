@@ -1,0 +1,59 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #DCE8DF;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#game-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #DCE8DF;
+}
+
+#game-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* Instruksi rotasi HP */
+@media screen and (orientation: portrait) and (max-width: 900px) {
+  #game-container::after {
+    content: "↻\A Putar HP ke posisi LANDSCAPE\A untuk memainkan NEON RUSH";
+    white-space: pre;
+    text-align: center;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #DCE8DF;
+    color: #344A3D;
+    font-size: clamp(18px, 5vw, 28px);
+    font-weight: bold;
+    line-height: 2;
+  }
+}
